@@ -44,30 +44,34 @@ function adder() {
 
 	num1 = 0;
 	num2 = 0;
+	num3 = 0;
 	finalresult = 0;
 
 	/* Ask for and add the two numbers together. */
 	num1 = prompt ('Enter the first number to add: ','');
 	num2 = prompt ('Enter the second number to add: ', '');
+	num3 = prompt ('Enter the third number to add: ', '');
 	
-	finalresult = parseFloat(num1) + parseFloat(num2);
+	finalresult = parseFloat(num1) + parseFloat(num2) + parseFloat(num3);
 	
 	return finalresult;
 }
 /* Subtractor function: subtracts two numbers together and returns the result. */
 function subtractor() {
 	/* Declare and set variables for first use. */
-	var num1, num2, finalresult;
+	var num1, num2, num3, finalresult;
 
 	num1 = 0;
 	num2 = 0;
+	num3 = 0;
 	finalresult = 0;
 
 	/* Ask for and subtract the two numbers. */
 	num1 = prompt ('Enter the first number to subtract: ','');
 	num2 = prompt ('Enter the second number to subtract: ', '');
+	num3 = prompt ('Enter the third number to subtract: ', '');
 	
-	finalresult = parseFloat(num1) - parseFloat(num2);
+	finalresult = parseFloat(num1) - parseFloat(num2) - parseFloat(num3);
 	
 	return finalresult;
 }
@@ -76,24 +80,26 @@ function subtractor() {
 /* Multiplier function. Change the ______ to what you think is appropriate*/
 function multiplier() {
 	/* Declare and set variables for first use. */
-	var num1, num2, finalresult;
+	var num1, num2, num3, finalresult;
 
 	num1 = 0;
 	num2 = 0;
+	num3 = 0;
 	finalresult = 0;
 
 	/* Ask for and multiply the two numbers together. */
 	num1 = prompt ('Enter the first number to multiply: ','');
 	num2 = prompt ('Enter the second number to multiply: ', '');
+	num3 = prompt ('Enter the third number to multiply: ', '');
 	
-	finalresult = parseFloat(num1) * parseFloat(num2);
+	finalresult = parseFloat(num1) * parseFloat(num2) * parseFloat(num3);
 	
 	return finalresult;
 }
 
 
 function divider() {
-	var num1, num2, finalresult;
+	var num1, num2, num3, finalresult;
 
 	num1 = 0;
 	num2 = 0;

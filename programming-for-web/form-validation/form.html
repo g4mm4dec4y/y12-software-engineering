@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<td><input type="text" name="Email"></td>
+</tr>
+
+<tr>
+    <td align="right">Phone</td>
+    <td><input type="text" name="Phone"></td>
+</tr>
+
+<tr>
+    <td align="right">Address</td>
+    <td><textarea cols="20" rows="5" name="Address"></textarea></td>
+</tr>
+
+<tr>
+    <td align="right">Country</td><html>
+<head>
+<title>JavaScript Form Validation example</title>
+<link rel="STYLESHEET" type="text/css" href="/style/jsc.css">
+</head>
+
+<body>
+
+<h1>JavaScript Form Validation example</h1>
+
+<ul>
+
+<li>The errors are shown in a MESSAGE LINE, one error at a time</li>
+<li>FirstName, LastName and Email are required fields</li>
+<li>FirstName, LastName max length is 20</li>
+<li>Phone number should be numeric only</li>
+<li>A Country should be selected</li>
+
+</ul>
+
+<form action="" name="myform" >
+
+<table cellspacing="2" cellpadding="2" border="0">
+<tr>
+    <td align="right">First Name</td>
+    <td><input type="text" name="FirstName"></td>
+</tr>
+
+<tr>
+    <td align="right">Last Name</td>
+    <td><input type="text" name="LastName"></td>
+</tr>
+<tr>
+    <td align="right">EMail</td>
+
+    <td>
+	   <SELECT name="Country">
+		<option value="000" selected>[choose yours]
+		<option value="008">Algeria
+		<option value="012">Austria
+		<option value="016">Angola
+		<option value="020">China
+		<option value="024">Colombia
+		<option value="660">France
+		<option value="660">Lybia
+<option value="660">Mozambique
+<option value="010">Portugal
+		<option value="032">Spain
+		<option value="051">UK
+		<option value="533">USA	
+	  </SELECT>
+	</td>
+</tr>
+
+<tr>
+    <td align="right"></td>
+    <td><input type="submit" value="SUBMIT"></td>
+</tr>
+
+</table>
+</form>
+
+<p id="demo"></p>
+
+</body>
+</html>

@@ -18,7 +18,7 @@
 
 </ul>
 
-<form action="" name="myform" >
+<form action="" name="myform" onsubmit="return myForm()">
 
 <table cellspacing="2" cellpadding="2" border="0">
 	
@@ -83,15 +83,20 @@
 <script language="JavaScript" type="text/javascript">
 
   function myForm () { 
+	  
+	var fname = document.forms["myform"]["FirstName"].value;
+	var lname = document.forms["myform"]["LastName"].value;
+	var email = document.forms["myform"]["Email"].value;
+	var phone = document.forms["myform"]["Phone"].value;
 
-  	if (FirstName.length > 30) { document.getElementById("demo").innerHTML = 'First Name too Long'} ;
+
+  	if (fname.length > 30) { document.getElementById("demo").innerHTML = 'First Name too Long'} ;
     
-	if (LastName.length > 50) { document.getElementById("demo").innerHTML = 'Last Name too Long'} ; 
+	if (lname.length > 50) { document.getElementById("demo").innerHTML = 'Last Name too Long'} ; 
 
-	if (Email.length == 0) { document.getElementById("demo").innerHTML = 'Email must be entered'} ;
+	if (email.length == 0) { document.getElementById("demo").innerHTML = 'Email must be entered'} ;
 
-	if (Phone.length > 9 | Phone.isNAN == false ) { document.getElementById("demo").innerHTML = 'Phone Number is Invalid'} ;
-
+	if (phone.length > 9 || Phone.isNAN == false ) { document.getElementById("demo").innerHTML = 'Phone Number is Invalid'} ;
  } ;
 	  	
 </script>

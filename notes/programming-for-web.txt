@@ -15,3 +15,7 @@ above: stores a value
 
 .innerHTML accesses space within the tags to modify or set.
 
+Dot notation = object.property
+attribute vs methods - in js method always has brackets in it
+e.g. document.method().attribute 
+

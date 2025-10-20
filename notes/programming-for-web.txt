@@ -9,3 +9,9 @@ Selector: properties; attributes and methods
 Procedures are part of procedural/imperative/module paradigm
 One returns, one makes something happen: functions and subroutines
 Function always returns
+
+<input type=“hidden” id=“clicked” value=“no”>
+above: stores a value
+
+.innerHTML accesses space within the tags to modify or set.
+

@@ -1,0 +1,58 @@
+<html>
+<script language="javascript">
+
+
+class Bird {
+	constructor (type, colour) {
+		this.birdtype = type;
+		this.birdcolour = colour;
+	}
+
+	fly () {
+		document.write("The " + this.birdtype + " is flying.<br>");
+	}
+
+	eat () {
+		document.write("The " + this.birdtype + " is eating.<br>");
+	}
+
+	sleep () {
+		document.write("The " + this.birdtype + " is sleeping.<br>");
+	}
+	
+	poo () {
+		document.write("The " + this.birdtype + " is pooing.<br>");
+	}
+
+}
+
+class Parrot extends Bird {
+	talk () {
+		document.write("The " + this.birdtype + " is talking.<br>");
+	}
+}
+
+class Rainbow_Lorikeet extends Bird {
+	eatNectar () {
+        document.write("The " + this.birdtype + " is eating nectar.<br>");
+    }
+    jumpAround () {
+        document.write("The " + this.birdtype + " is jumping around.<br>");
+    }
+}
+
+
+var budgerigar = new Bird("Budgerigar","Blue");
+budgerigar.fly();
+budgerigar.eat();
+
+var parrot = new Parrot("Parrot","Red");
+parrot.fly();
+parrot.eat();
+parrot.talk();
+
+budgerigar.talk();
+
+
+</script>
+</html>

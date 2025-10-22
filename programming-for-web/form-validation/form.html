@@ -24,27 +24,27 @@
 	
 <tr>
     <td align="right">First Name</td>
-    <td><input type="text" name="FirstName"></td>
+    <td><input type="text" name="FirstName" id="FirstName"></td>
 </tr>
 
 <tr>
     <td align="right">Last Name</td>
-    <td><input type="text" name="LastName"></td>
+    <td><input type="text" name="LastName" id="LastName"></td>
 </tr>
 
 <tr>
 	<td align="right">Email</td>
-	<td><input type="text" name="Email"></td>
+	<td><input type="text" name="Email" id="Email"></td>
 </tr>
 
 <tr>
     <td align="right">Phone</td>
-    <td><input type="text" name="Phone"></td>
+    <td><input type="text" name="Phone" id="Phone"></td>
 </tr>
 
 <tr>
     <td align="right">Address</td>
-    <td><textarea cols="20" rows="5" name="Address"></textarea></td>
+    <td><textarea cols="20" rows="5" name="Address" id="Address"></textarea></td>
 </tr>
 	
 <tr>
@@ -77,26 +77,41 @@
 </table>
 </form>
 
-<p id="demo"></p>
+<p id="demo">&nbsp;</p>
 <!-- You should create the validators only after the definition of the HTML form -->
    
 <script language="JavaScript" type="text/javascript">
 
   function myForm () { 
-	  
-	var fname = document.forms["myform"]["FirstName"].value;
-	var lname = document.forms["myform"]["LastName"].value;
-	var email = document.forms["myform"]["Email"].value;
-	var phone = document.forms["myform"]["Phone"].value;
+	
 
+	var first, last, email, phone;
 
-  	if (fname.length > 30) { document.getElementById("demo").innerHTML = 'First Name too Long'} ;
+	first = document.getElementById("FirstName");
+	last = document.getElementById("LastName");
+	email = document.getElementById("Email");
+	phone = document.getElementById("Phone");
+
+	if (first.value.length > 20 ) { 
+		document.getElementById("demo").innerHTML = 'First Name too Long';
+		return false;
+	};
     
-	if (lname.length > 50) { document.getElementById("demo").innerHTML = 'Last Name too Long'} ; 
+	if (last.value.length > 20) { 
+		document.getElementById("demo").innerHTML = 'Last Name too Long';
+		return false;
+	}; 
 
-	if (email.length == 0) { document.getElementById("demo").innerHTML = 'Email must be entered'} ;
+	if (email.value.length == 0) { 
+		document.getElementById("demo").innerHTML = 'Email must be entered';
+		return false;
+	};
 
-	if (phone.length > 9 || Phone.isNAN == false ) { document.getElementById("demo").innerHTML = 'Phone Number is Invalid'} ;
+	if (phone.value.length > 9 || isNAN(phone.value) == false ) { 
+		document.getElementById("demo").innerHTML = 'Phone Number is Invalid'
+		return false;
+	};
+
  } ;
 	  	
 </script>

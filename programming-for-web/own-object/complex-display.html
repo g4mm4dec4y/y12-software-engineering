@@ -12,6 +12,7 @@ class display {
 			this.display_signal = signal;
 			this.display_device = device;
 			this.display_brightness = 50;
+            this.display_status = 0;
 		} else {
 			alert("No signal nor device type sent to the display.");
 		}
@@ -67,25 +68,131 @@ class display {
 	}
 }
 
-class Smartwatch extends Display {
+class Smartwatch extends display {
+    constructor (signal, device) {
+        super (signal, device)
+            this.display_status = 0;
+            this.step_amount = 10000;
+
+    }
+
 	display_menu () {
-		…
+		if (this.display_status == 0) {
+            alert("Displaying menu");
+            this.display_status = 1;
+        } else if (this.display_status == 0) {
+            alert("Menu stopped displaying");
+            this.display_status =0;
+        }
 	}
+    show_steps () {
+        alert(this.step_amount);
+    }
+    notification () {
+        alert("You have received a notification");
+    }
+    turn_off () {
+        alert("Display turned off");
+    }
+}
+
+class TV extends display {
+    constructor (signal, device) {
+        super (signal, device);
+            this.volume = 0;
+            this.channel_number = 0;
+            this.display_status = 0;
+    }
+
+    diplay_menu () {
+		if (display_status == 0) {
+            alert("Displaying menu");
+            display_status = 1;
+
+        } else if (display_status == 1) {
+            alert("Menu stopped displaying");
+            display_status = 0;
+        }
+	}
+
+    change_volume (volume_change) {
+        if (this.volume == 0) {
+            if (volume_change == "UP") {
+                this.volume = 1;
+                alert("Volume increased.");
+            } else if (volume_change == "DOWN") {
+                alert("You have not increased the volume.");
+            }
+        } else if (this.volume = 1) {
+            if (volume_change == "UP") {
+                alert("You already increased the volume.");
+            } else if (volume_change == "DOWN") {
+                this.volume = 0;
+                alert("Volume decreased.");
+            }
+        }
+    }
+    change_channel (new_channel_number) {
+        this.channel_number = new_channel_number;
+        alert("Channel changed to " + this.channel_number);
+
+    }
+    turn_off () {
+       alert("Display turned off."); 
+    }
+}
+
+class Phone extends display {
+    constructor (signal, device) {
+        super (signal, device);
+            this.display_status = 0;
+            this.active_call = 0;
+    }
+
+	display_menu () {
+		if (this.display_status == 0) {
+            alert("Displaying menu");
+            this.display_status = 1;
+        } else if (this.display_status == 1) {
+            alert("Menu stopped displaying");
+            this.display_status = 0;
+        }
+	}
+    call (phone_number) {
+        if (this.active_call == 0) {
+            alert("Dialling " + phone_number);
+            this.active_call = 1;
+        } else if (this.active == 1) {
+            alert("There is already an active call.");
+        }
+    }
+    hang_up () {
+        if (this.active_call == 1) {
+            alert("Call ended.");
+            this.active_call = 0;
+        } else if (this.active_call == 0) {
+            alert("There are no active calls.");
+        }
+    }
+    turn_off () {
+        alert("Display turned off");
+    }
 }
 
 
-var TV = new display("ON", "HDMI");
-TV.turn_on();
-TV.control_brightness("BRIGHT_UP");
-TV.control_source();
-TV.control_brightness("BRIGHT_DOWN");
-TV.turn_on("OFF");
+var iTV = new TV("ON", "HDMI");
+iTV.turn_on();
+iTV.control_brightness("BRIGHT_UP");
+iTV.control_source();
+iTV.control_brightness("BRIGHT_DOWN");
+iTV.turn_on("OFF");
 
 
 var LGSmartwatch = new Smartwatch("ON", "HDMI");
 var GoogleSmartwatch = new Smartwatch("ON", "VGA");
-var OppoA3s = new mobile_phone("ON", "VGA");
+var OppoA3s = new Phone("ON", "VGA");
 var SmartTV = new TV("ON", "AV");
+
 
 LGSmartwatch.display_menu();
 GoogleSmartwatch.display_menu();
@@ -96,10 +203,10 @@ SmartTV.control_brightness("BRIGHT_UP");
 OppoA3s.control_brightness("BRIGHT_DOWN");
 
 OppoA3s.call("012 234 345");
-OppoA3s.hangup();
+OppoA3s.hang_up();
 
 SmartTV.change_channel("7");
-SmartTV.volume("UP");
+SmartTV.change_volume("UP");
 
 
 </script>

@@ -19,3 +19,5 @@ Dot notation = object.property
 attribute vs methods - in js method always has brackets in it
 e.g. document.method().attribute 
 
+Line PWA and site is blurry. PWA vs site diff -> functionality.
+Uses resources of browser

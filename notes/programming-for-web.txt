@@ -21,3 +21,9 @@ e.g. document.method().attribute
 
 Line PWA and site is blurry. PWA vs site diff -> functionality.
 Uses resources of browser
+
+Local, PWA, server is computer and thus can run offline.
+However traditional website has external servers so can't run online
+
+6-word summary
+- 3-6 word per paragraph, must come from paragraph basically a summary, can be less, helps remember data

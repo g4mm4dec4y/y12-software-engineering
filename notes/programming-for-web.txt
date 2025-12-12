@@ -25,5 +25,15 @@ Uses resources of browser
 Local, PWA, server is computer and thus can run offline.
 However traditional website has external servers so can't run online
 
+Ring topology - full form is 'token ring'.
+Goes around the circle and finds which device matches the token that is carried.
+
+Router - works with switch
+Switch - data sent along predetermined paths, most safe/accurate etc, directs packets
+Router - basically a GPS for the packets
+Was predecadet on data bein open
+
+Implement privacy by design in the code. 
+
 6-word summary
 - 3-6 word per paragraph, must come from paragraph basically a summary, can be less, helps remember data
